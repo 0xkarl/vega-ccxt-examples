@@ -1,0 +1,16 @@
+{
+  "name": "bot",
+  "version": "1.0.0",
+  "description": "vega ccxt integration test",
+  "dependencies": {
+    "ccxt": "0xkarl/ccxt",
+    "env-cmd": "^10.1.0"
+  },
+  "scripts": {
+    "start": "env-cmd node bot.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
