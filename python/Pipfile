@@ -1,0 +1,15 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+setuptools = ">38.5.1"
+certifi = ">2018.1.18"
+requests = ">2.18.4"
+cryptography = ">2.6.1"
+
+[dev-packages]
+
+[requires]
+python_version = "3.7"

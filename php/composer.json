@@ -1,0 +1,15 @@
+{
+    "name": "0xkarl/vega-ccxt-examples",
+    "autoload": {
+        "psr-4": {
+            "0xkarl\\VegaCcxtExamples\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "0xkarl",
+            "email": "karl.schwtz@gmail.com"
+        }
+    ],
+    "require": {}
+}
