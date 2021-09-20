@@ -1,4 +1,7 @@
-bot:
-	@python bot.py
+async:
+	@python bot_$@.py
 
-.PHONY: bot
+sync:
+	@python bot_$@.py
+
+.PHONY: async

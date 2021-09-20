@@ -1,4 +1,4 @@
 bot:
-	@php -f src/bot.php
+	@php -f bot.php
 
 .PHONY: bot

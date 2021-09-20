@@ -11,5 +11,7 @@
             "email": "karl.schwtz@gmail.com"
         }
     ],
-    "require": {}
+    "require": {
+        "vlucas/phpdotenv": "^5.3"
+    }
 }
