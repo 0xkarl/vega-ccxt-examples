@@ -16,7 +16,7 @@ const exchange = new ccxt.vega({
     // console.log(await exchange.fetchMarkets());
     // console.log(await exchange.fetchCurrencies());
     // console.log(await exchange.fetchTicker(symbol))
-    console.log(await exchange.createOrder(symbol, type, side, amount, price));
+    // console.log(await exchange.createOrder(symbol, type, side, amount, price));
 
     // const orderId = 'V0002108884-0159145573';
     // const orderReference = 'ca22e9c9-1558-420e-ac9e-c2e9bf14da3d';

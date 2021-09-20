@@ -15,24 +15,24 @@ $side = 'BUY';
 $amount = 2;
 $price = 21;
 
-// var_dump(exchange->fetch_markets());
-// var_dump(exchange->fetch_currencies());
-// var_dump(exchange->fetch_ticker(symbol))
-// var_dump(exchange->create_order(symbol, type, side, amount, price));
+// var_dump($exchange->fetch_markets());
+// var_dump($exchange->fetch_currencies());
+// var_dump($exchange->fetch_ticker($symbol));
+// var_dump($exchange->create_order($symbol, $type, $side, $amount, $price));
 
-// $orderId = 'V0002108884-0159145573';
-// $orderReference = 'ca22e9c9-1558-420e-ac9e-c2e9bf14da3d';
+$order_id = 'V0002108884-0159145573';
+$order_reference = '1cafda1b-8ebd-41d8-ab1c-34a2258d00b0';
 
-// var_dump(exchange->fetch_orders(symbol));
-// var_dump(exchange->cancel_order(orderId, symbol));
-// var_dump(exchange->fetch_order(orderReference));
-// console.log(
-//   await e.amendOrder($orderId, $symbol, {
-//     price: 190,
+// var_dump($exchange->fetch_orders($symbol));
+var_dump($exchange->cancel_order($order_id, $symbol));
+// var_dump($exchange->fetch_order($order_reference));
+// var_dump(
+//   $exchange->amendOrder($order_id, $symbol, {
+//     'price' => 190,
 //   })
 // );
 
-var_dump($exchange->fetch_positions($symbol));
+// var_dump($exchange->fetch_positions($symbol));
 echo "\n";
 
 ?>

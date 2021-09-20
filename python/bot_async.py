@@ -21,7 +21,7 @@ async def test():
     })
 
     symbol = 'AAVEDAI.MF21'  # UNIDAI.MF21
-    tpe = 'LIMIT'
+    typ = 'LIMIT'
     side = 'BUY'
     amount = 2
     price = 21
@@ -29,7 +29,7 @@ async def test():
     # print(await exchange.fetch_markets())
     # print(await exchange.fetch_currencies())
     # print(await exchange.fetch_ticker(symbol))
-    # print(await exchange.create_crder(symbol, type, side, amount, price))
+    print(await exchange.create_order(symbol, typ, side, amount, price))
 
     orderId = 'V0002108884-0159145573'
     orderReference = 'ca22e9c9-1558-420e-ac9e-c2e9bf14da3d'
@@ -42,7 +42,7 @@ async def test():
     #     price: 190,
     #   })
     # );
-    print(await exchange.fetch_positions(symbol))
+    # print(await exchange.fetch_positions(symbol))
 
     await exchange.close()  # don't forget to close it when you're done
     return True
