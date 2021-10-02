@@ -2,8 +2,16 @@
 
 copy `.env.sample` to `.env` and update accordingly
 make a pipenv shell
-    $ pipenv --python 3
-    $ pipenv sync
+
+```sh
+pipenv --python 3
+pipenv sync
+```
+
 run bot:
-    $ make sync # sync
-    $ make async # async
+
+```sh
+make sync # sync
+make async # async
+
+```
