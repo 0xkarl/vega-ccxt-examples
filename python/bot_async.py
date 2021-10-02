@@ -4,6 +4,7 @@ import asyncio
 import os
 import sys
 from dotenv import load_dotenv
+import json
 
 load_dotenv()
 
@@ -29,13 +30,13 @@ async def test():
     # print(await exchange.fetch_markets())
     # print(await exchange.fetch_currencies())
     # print(await exchange.fetch_ticker(symbol))
-    print(await exchange.create_order(symbol, typ, side, amount, price))
+    # print(await exchange.create_order(symbol, typ, side, amount, price))
 
-    orderId = 'V0002108884-0159145573'
+    orderId = 'V0000778657-0023746594'
     orderReference = 'ca22e9c9-1558-420e-ac9e-c2e9bf14da3d'
 
-    # print(await exchange.fetch_orders(symbol))
-    # print(await exchange.cancel_order(orderId, symbol))
+    # print(json.dumps(await exchange.fetch_orders(symbol), sort_keys=True, indent=4))
+    print(await exchange.cancel_order(orderId, symbol))
     # print(await exchange.fetch_order(orderReference))
     # print(
     #   await exchange.amend_order(order_id, symbol, {

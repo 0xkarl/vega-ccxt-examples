@@ -20,11 +20,11 @@ $price = 21;
 // var_dump($exchange->fetch_ticker($symbol));
 // var_dump($exchange->create_order($symbol, $type, $side, $amount, $price));
 
-$order_id = 'V0002108884-0159145573';
+$order_id = 'V0000778737-0023749213';
 $order_reference = '1cafda1b-8ebd-41d8-ab1c-34a2258d00b0';
 
-// var_dump($exchange->fetch_orders($symbol));
-var_dump($exchange->cancel_order($order_id, $symbol));
+var_dump($exchange->fetch_orders($symbol));
+// var_dump($exchange->cancel_order($order_id, $symbol));
 // var_dump($exchange->fetch_order($order_reference));
 // var_dump(
 //   $exchange->amendOrder($order_id, $symbol, {

@@ -4,4 +4,7 @@ async:
 sync:
 	@python bot_$@.py
 
-.PHONY: async
+shell:
+	@pipenv shell
+
+.PHONY: async sync shell
