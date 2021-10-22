@@ -1,4 +1,4 @@
-const ccxt = require('../../ccxt/ccxt.js');
+import ccxt from '../../ccxt/ccxt.js';
 
 const exchange = new ccxt.vega({
   apiKey: process.env.WALLET_KEY,
@@ -7,21 +7,32 @@ const exchange = new ccxt.vega({
 
 (async () => {
   try {
-    const symbol = 'AAVEDAI.MF21'; // UNIDAI.MF21
+    const symbol = 'UNIDAI.MF21';
     const type = 'LIMIT';
     const side = 'BUY';
-    const amount = 2;
+    const amount = 20000000000000;
     const price = 21;
 
     // console.log(await exchange.fetchMarkets());
     // console.log(await exchange.fetchCurrencies());
     // console.log(await exchange.fetchTicker(symbol));
-    // console.log(await exchange.createOrder(symbol, type, side, amount, price));
 
-    const orderId = 'V0000778737-0023749213';
-    const orderReference = 'ca22e9c9-1558-420e-ac9e-c2e9bf14da3d';
+    const orderReference = await exchange.createOrder(symbol, type, side, amount, price);
+    let order;
+    while (!order) {
+      try {
+      order = await exchange.fetchOrder(orderReference);
+      console.log(order);
+      } catch (e) {
+        console.warn(e);
+      }
+    }
+    console.log(order.id, order.reason);
 
-    console.log(await exchange.fetchOrders(symbol));
+    // const orderId = 'V0000778737-0023749213';
+    // const orderReference = 'ca22e9c9-1558-420e-ac9e-c2e9bf14da3d';
+
+    // console.log(await exchange.fetchOrders(symbol));
     // console.log(await exchange.cancelOrder(orderId, symbol));
     // console.log(await exchange.fetchOrder(orderReference));
     // console.log(
