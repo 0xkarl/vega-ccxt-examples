@@ -21,8 +21,7 @@ const exchange = new ccxt.vega({
     let order;
     while (!order) {
       try {
-      order = await exchange.fetchOrder(orderReference);
-      console.log(order);
+        order = await exchange.fetchOrder(orderReference);
       } catch (e) {
         console.warn(e);
       }
